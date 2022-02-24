@@ -26,9 +26,14 @@ Explanation:
 # {'A':4, 'B':2, 'C':3} -> 'C' is the only key with an odd value so it's the only one that remains unchanged
 
 """
-
 def mapped(input1:list, input2:list, input3:dict, input4:dict):
-    pass
+    input_one_map = list(map(lambda n: 1 if n % 2 == 0 else 0, input1))
+    input_two_map = list(map(lambda n: 1 if n % 2 != 0 else 0, input2))
+    input_three_map = list(map(lambda key: key if input3[key] % 2 == 0 else None, input3))
+    input_four_map = list(map(lambda key: key if input4[key] % 2 != 0 else None, input4))
+    
+    return (input_one_map, input_two_map, input_three_map, input_four_map)    
+            
 
 """
 2. Filter Function
@@ -43,7 +48,7 @@ For input3 and input4 you will be given dictionaries
     For input4 use the filter function to figure out which keys have odd values
 
 You will return 2 things from filtered
-    1. The sum of what you get from filtering input1 and input
+    1. The sum of what you get from filtering input1 and input2
     2. One list of all keys that have even values in input3 and odd values in input4
 
 You must use the map function for each input (4 times)
@@ -62,7 +67,14 @@ Explanation:
 
 """
 def filtered(input1:list, input2:list, input3:dict, input4:dict):
-    pass
+    input_one_filter = list(filter(lambda n: 1 if n % 2 == 0 else 0, input1))
+    input_two_filter = list(filter(lambda n: 1 if n % 2 != 0 else 0, input2))
+    input_three_filter = list(filter(lambda key: key if input3[key] % 2 == 0 else None, input3))
+    input_four_filter = list(filter(lambda key: key if input4[key] % 2 != 0 else None, input4))
+    
+    return ((sum(input_one_filter) + sum(input_two_filter)), input_three_filter + input_four_filter)    
+
+print(filtered([1,8,10], [9,3,4], {'A':1, 'B':2, 'C':3}, {'A':4, 'B':2, 'C':3}))
 
 """
 3. Reduce Function
@@ -83,13 +95,11 @@ Explanation:
 1*2=2 ADD (since 2 is even) 1+2=3
 3*3=9 SUB (since 9 is odd) 3-3=0
 0*5=0 ADD (since 0 is even) 0+5=5
-
 """
 
 def reduced(input1:list):
-  pass
-
-
+    solution = 0
+    return reduce(lambda a, b: (a + b) if (a * b) % 2 == 0 else (a-b), input1)
 
 
 

@@ -1,0 +1,82 @@
+Link: https://github.com/Jdwalli/github-lab-basics.git
+
+Step One: 
+  git init
+  git add .
+  git commit -m "first commit"
+  git branch -M firstBranch
+  git remote add origin https://github.com/Jdwalli/github-lab-basics.git
+  git push -u origin firstBranch
+
+Step Two:
+  git add .
+  git commit -m "second commit"
+  git push -u origin firstBranch
+
+Step Three:
+  git add .
+  git commit -m "third commit"
+  git push -u origin firstBranch
+
+Step Four:
+  git branch -M secondBranch
+
+Step Five:
+  git add .
+  git commit -m "fourth commit"
+  git push -u origin secondBranch
+
+Step Six:
+  git branch -M thirdBranch
+  git branch --show-current
+  git add *.json
+  git status
+  git commit -m "fifth commit with json files"
+  git push -u origin thirdBranch
+
+Step Seven:
+  git add *.ts
+  git commit -m "sixth commit with typescript files"
+  git push -u origin thirdBranch
+
+  git add *.js
+  git commit -m "seventh commit with javascript files"
+  git push -u origin thirdBranch
+
+  git add *.c
+  git commit -m "eigth commit with c files"
+  git push -u origin thirdBranch
+
+  git add *.java
+  git commit -m "ninth commit with java files"
+  git push -u origin thirdBranch
+
+  git add *.CPP
+  git commit -m "tenth commit with c++ files"
+  git push -u origin thirdBranch
+
+  git add *.s
+  git commit -m "eleventh commit with assembly files"
+  git push -u origin thirdBranch
+
+Step Eight:
+  git branch -M secondBranch
+  git add .
+  git commit -m "assembly files deleted"
+  git push -u origin secondBranch
+
+Step Nine:
+  git pull origin firstBranch
+  git add .
+  git commit -m "updated main.txt from IDE"
+  git push -u origin firstBranch
+
+
+Step Ten:
+  git checkout thirdBranch
+  git add .
+  git commit -m "deleted all files in randomLanguages"
+  git push -u origin thirdBranch
+  git checkout firstBranch
+  git push origin :thirdBranch
+

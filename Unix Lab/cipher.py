@@ -2,15 +2,19 @@ import sys
 
 def encrypt(message, key):
     # Discard all the punctuation marks, digits, blanks, and anything else from the input string.
-    EXCLUSION_STRING = "123456789!@#$%^&*()+_~[{]}:;',<.>?/ "
+    INCLUSION_STRING = "QWERTYUIOPASDFGHJKLZXCVBNM"
     encrypted_message = ""
 
     for character in message:
-        if character not in EXCLUSION_STRING:
+        if character in INCLUSION_STRING:
             encrypted_message += chr(( ord(character) + key - 65) % 26 + 65)
     return encrypted_message
 
 def print_encrypted_message(encoded_message):
+    """
+    Print the final encoded message in blocks of five letters to the screen (stdout), ten blocks per line. 
+    The last line may be shorter than five blocks, and the last block may be shorter than five letters.
+    """
     line_count = 0
     for index, char in enumerate(encoded_message):
         if line_count == 10:
@@ -35,7 +39,9 @@ if __name__ == "__main__":
             print("This was not a valid key! Try again with a number!")
     else:
         print("Please only add one key argument!")
+    
     message = input("Enter your unencoded message: ")
     # Convert the message to all uppercase.
     message = message.upper()
+    # Final Method
     print_encrypted_message(encrypt(message, key))

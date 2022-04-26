@@ -5,5 +5,6 @@
 
 | Course | Instructor | Technology covered |
 | ------------- | ------------- | -------------|
+| CSCI 100 | Alex Krentsel | Python|
 | CSCI 135 | Saurav Aryal | Python|
 | CSCI 211 | Legand Burge  | Unix, GitHub, Shell Scripting|

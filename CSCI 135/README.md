@@ -15,4 +15,6 @@ Credits: 4
 | 4 | Operator Overloading and Access Modifiers | Object Oriented Programming |
 | 5 | Github | Git, Github, CLI Interfaces |
 | 6 | Linked Lists | Linked Lists, Matrices |
+| 7 | Stacks and Queues | Stacks, Queues, Linked, Lists |
+
 

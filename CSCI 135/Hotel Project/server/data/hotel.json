@@ -1,0 +1,30 @@
+{
+    "employees": {
+        "info": [
+            {}
+        ],
+        "base_salary_map": {
+            "Manager": 60000,
+            "Housekeeper": 20000,
+            "Cook": 20000,
+            "Janitor": 20000,
+            "Bellhop": 20000,
+            "Valet": 20000,
+            "Server": 20000,
+            "Security": 40000,
+            "Director of Services": 120000
+        },
+        "salary_step_map": {
+            "Step 1": 500,
+            "Step 2": 600,
+            "Step 3": 800,
+            "Step 4": 1000,
+            "Step 5": 2100,
+            "Step 6": 2350,
+            "Step 7": 3200,
+            "Step 8": 3800,
+            "Step 9": 5600,
+            "Step 10": 7000
+        }
+    }
+}

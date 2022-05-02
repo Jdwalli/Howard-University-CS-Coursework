@@ -6,7 +6,6 @@ import { useState, useEffect } from "react"
 const Employees = () => {
     const [employeeTable, setEmployeeTable] = useState({})
 
-
     useEffect(() => {
         const getAllEmployees = async () => {
           const allEmployees = await axios("/api/get/employees")
@@ -59,14 +58,14 @@ const Employees = () => {
                                     console.log(key)
                                     return (
                                         <tr>
-                                            <td key={key} colSpan={1}> {employeeTable[key]["id"]} </td>
-                                            <td key={key}> {employeeTable[key]["name"]} </td>
-                                            <td key={key}> {employeeTable[key]["job"]} </td>
-                                            <td key={key}> {employeeTable[key]["age"]} </td>
-                                            <td key={key}> {employeeTable[key]["phone"]} </td>
-                                            <td key={key}> {employeeTable[key]["email"]} </td>
-                                            <td key={key}> {employeeTable[key]["salary"]} </td>
-                                            <td key={key}> {employeeTable[key]["ssn"]} </td>
+                                            <td key={key} colSpan={1}> {employeeTable[key]["ID"]} </td>
+                                            <td key={key}> {employeeTable[key]["Name"]} </td>
+                                            <td key={key}> {employeeTable[key]["Job Title"]} </td>
+                                            <td key={key}> {employeeTable[key]["Age"]} </td>
+                                            <td key={key}> {employeeTable[key]["Phone"]} </td>
+                                            <td key={key}> {employeeTable[key]["Email"]} </td>
+                                            <td key={key}> {employeeTable[key]["Salary"]} </td>
+                                            <td key={key}> {employeeTable[key]["SSN"]} </td>
                                         </tr>
                                     )
                                 })}

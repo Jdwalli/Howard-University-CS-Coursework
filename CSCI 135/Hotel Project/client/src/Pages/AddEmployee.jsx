@@ -15,7 +15,6 @@ const AddEmployee = () => {
         e.preventDefault()
         const formData = new FormData(e.target),
         formDataObj = Object.fromEntries(formData.entries())
-        console.log(formDataObj)
         try {
             const res = await axios.post("/api/add/employee", formDataObj, {
               headers: { "Content-Type" : "application/json" },  
@@ -29,8 +28,8 @@ const AddEmployee = () => {
               }
             )
             setTimeout(() => {
-              navigate("/", { replace: true });
-            }, 3000)
+              navigate("/employees", { replace: true });
+            }, 1000)
           } 
           catch (err) {
             if (err.response.status === 500){
@@ -133,10 +132,15 @@ const AddEmployee = () => {
                                 <Form.Group className="mb-3">
                                     <Form.Label>Occupation</Form.Label>
                                     <Form.Select name="Occupation">
-                                        <option>Job 1</option>
-                                        <option>Job 2</option>
-                                        <option>Job 3</option>
-                                        <option>Job 4</option>
+                                        <option> Manager </option>
+                                        <option> Housekeeper </option>
+                                        <option> Cook </option>
+                                        <option> Janitor </option>
+                                        <option> Bellhop </option>
+                                        <option> Valet </option>
+                                        <option> Server </option>
+                                        <option> Security </option>
+                                        <option> Director of Services </option>
                                     </Form.Select>
                                 </Form.Group>
                             </Col>

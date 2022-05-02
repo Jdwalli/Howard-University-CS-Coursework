@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quantico";
+}
+
+:root {
+    --bg-color: #14141a;
+    --content-bg-color: hsla(240, 10%, 18%, 0.815);
+    --text-color: #f2f0f0;
+    --accent-color: #2bfebe;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #fff;
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 10px;
+}

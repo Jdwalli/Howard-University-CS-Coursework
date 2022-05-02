@@ -1,0 +1,20 @@
+@import url("Root.css");
+
+body {
+  color: royalblue;
+  background: var(--bg-color) !important;
+  height: 100% !important;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden ;
+}
+
+
+.content {
+  height: 100%;
+  margin-top: .5rem;
+  margin-right: .5rem;
+  overflow: hidden;
+}
+
+
